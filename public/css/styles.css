@@ -1,0 +1,38 @@
+.initial-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.initial-page img {
+    margin-bottom: 100px;
+}
+
+
+.start-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #FFEF61;
+    border-radius: 10px;
+    width: 392px;
+    height: 70px;
+
+    margin: 0 auto;
+}
+
+.start-button p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.initial-page .start-button img {
+    margin: 0;
+}
