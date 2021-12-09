@@ -2,6 +2,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 .initial-page {
   display: flex;
   flex-direction: column;
@@ -165,4 +169,29 @@ body {
 
 .yellow {
   border: 3px solid #ffef61;
+}
+
+.final-page .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: calc((100vh/2 - 84px));
+}
+
+.final-page .message p {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.final-page p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    margin-top: 26px;
 }

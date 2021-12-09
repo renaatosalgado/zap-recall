@@ -1,3 +1,4 @@
+import FinalPage from "./FinalPage";
 import Flashcards from "./Flashcards";
 import TopBar from "./TopBar";
 
@@ -49,7 +50,8 @@ export default function Game() {
   return (
     <>
       <TopBar />
-      <Flashcards />
+      <FinalPage />
+      {/* <Flashcards /> */}
     </>
   );
 }
