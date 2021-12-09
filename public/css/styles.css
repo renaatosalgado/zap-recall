@@ -1,38 +1,92 @@
 .initial-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    margin: 0 auto;
-    padding-top: 10%;
+  margin: 0 auto;
+  padding-top: 10%;
 }
 
 .initial-page img {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
-
 .start-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: 2px solid #FFEF61;
-    border-radius: 10px;
-    width: 392px;
-    height: 70px;
+  border: 2px solid #ffef61;
+  border-radius: 10px;
+  width: 392px;
+  height: 70px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .start-button p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    margin-right: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.start-button:hover {
+  cursor: pointer;
+  background-color: #ffef61;
 }
 
 .initial-page .start-button img {
-    margin: 0;
+  margin: 0;
+}
+
+.mini-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.flashcard {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  width: 392px;
+  height: 575px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+
+  margin: 0 auto;
+  margin-top: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.flashcard .card-counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+}
+
+.flashcard .turn-page {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.flashcard .turn-page:hover {
+    cursor: pointer;
+}
+
+.flashcard .card-question {
+    font-weight: 700;
+    font-size: 28px;
 }

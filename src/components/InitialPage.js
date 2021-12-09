@@ -1,13 +1,34 @@
-import MainLogo from "../assets/logo.png"
-import StartButton from "./StartButton"
+import MainLogo from "../assets/logo.png";
+import NextIcon from "../assets/next.png";
+import { useState } from "react";
+import Game from "./Game";
 
 export default function InitialPage() {
-    return(
-        <>
-            <div className="initial-page">
-                <img src={MainLogo} alt="main-logo"/>
-                <StartButton />
+  const [clicked, setClicked] = useState(false);
+
+  const chooseDeck = () => {
+    setClicked(true);
+  };
+
+  return (
+    <>
+      {clicked ? (
+        <Game />
+      ) : (
+        <div className="initial-page">
+          <img src={MainLogo} alt="main-logo" />
+          <div>
+            <div
+              className="start-button"
+              data-identifier="start-zap-recall"
+              onClick={chooseDeck}
+            >
+              <p>Praticar React</p>
+              <img src={NextIcon} alt="next" />
             </div>
-        </>
-    )
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
