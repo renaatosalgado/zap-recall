@@ -17,16 +17,15 @@ export default function InitialPage() {
       ) : (
         <div className="initial-page">
           <img src={MainLogo} alt="main-logo" />
-          <div>
-            <div
-              className="start-button"
-              data-identifier="start-zap-recall"
-              onClick={chooseDeck}
-            >
-              <p>Praticar React</p>
-              <img src={NextIcon} alt="next" />
-            </div>
-          </div>
+          <button
+            type="button"
+            className="start-button"
+            data-identifier="start-zap-recall"
+            onClick={chooseDeck}
+          >
+            <p>Praticar React</p>
+            <img src={NextIcon} alt="next" />
+          </button>
         </div>
       )}
     </>

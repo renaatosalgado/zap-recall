@@ -5,7 +5,7 @@ const ReactDeck = [
   {
     id: 1,
     question: "O que é JSX?",
-    answer: "Uma extensão de linaugem do JavaScript.",
+    answer: "Uma extensão de linguagem do JavaScript.",
   },
   {
     id: 2,
