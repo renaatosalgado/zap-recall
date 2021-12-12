@@ -1,4 +1,3 @@
-import FinalPage from "./FinalPage";
 import Flashcards from "./Flashcards";
 import TopBar from "./TopBar";
 
