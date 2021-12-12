@@ -1,9 +1,9 @@
-import InitialPage from "./InitialPage";
+import RenderInitialPage from "./RenderInitialPage";
 
 export default function App() {
   return (
     <>
-      <InitialPage />
+      <RenderInitialPage />
     </>
   );
 }
