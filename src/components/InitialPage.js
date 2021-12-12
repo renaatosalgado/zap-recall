@@ -5,15 +5,17 @@ import Game from "./Game";
 
 export default function InitialPage() {
   const [clicked, setClicked] = useState(false);
+  const [questionId, setQuestionId] = useState(1);
 
   const chooseDeck = () => {
+    setQuestionId(1);
     setClicked(true);
   };
 
   return (
     <>
       {clicked ? (
-        <Game />
+        <Game questionId={questionId} setQuestionId={setQuestionId} />
       ) : (
         <div className="initial-page">
           <img src={MainLogo} alt="main-logo" />
