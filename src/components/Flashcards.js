@@ -3,32 +3,45 @@ import TurnPage from "../assets/turn.png";
 import Deck from "./Deck";
 import FinalPage from "./FinalPage";
 
-export default function Flashcards({ questionId, setQuestionId }) {
+export default function Flashcards({
+  questionId,
+  setQuestionId,
+  zapQtt,
+  setZapQtt,
+}) {
   const [showed, setShowed] = useState(false);
   const [card, setCard] = useState("flashcard");
   const [buttons, setButtons] = useState("answer-buttons");
   const [turn, setTurn] = useState("turn-page hidden");
   const [endGame, setEndGame] = useState(false);
-  const [hasFalse, setHasFalse] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [typeAnswer, setTypeAnswer] = useState([]);
+  const [isZap, setIsZap] = useState([]);
+
+  let ZAPS = [];
 
   function showAnswer() {
     setShowed(true);
   }
 
-  function selectAnswer(color, isCorrect) {
+  function selectAnswer(color, isCorrect, hasZap) {
     setButtons("hidden");
     setCard(`flashcard ${color}`);
     setTurn("turn-page");
     setTypeAnswer([...typeAnswer, isCorrect]);
+    setIsZap([...isZap, hasZap]);
   }
 
   function nextQuestion() {
     if (Deck.length === typeAnswer.length) {
       setEndGame(true);
 
-      if (typeAnswer.includes(false)) {
-        setHasFalse(true);
+      const filteredZaps = isZap.filter((zap) => zap === true);
+
+      ZAPS = filteredZaps;      
+
+      if (!typeAnswer.includes(false) && ZAPS.length >= zapQtt) {
+        setIsSuccess(true);
       }
     } else {
       setShowed(false);
@@ -42,10 +55,10 @@ export default function Flashcards({ questionId, setQuestionId }) {
   return (
     <>
       {endGame ? (
-        hasFalse ? (
-          <FinalPage hasFalse={true} />
+        isSuccess ? (
+          <FinalPage isSuccess={true} />
         ) : (
-          <FinalPage hasFalse={false} />
+          <FinalPage isSuccess={false} />
         )
       ) : showed ? (
         <div className={card} data-identifier="flashcard">
@@ -58,28 +71,28 @@ export default function Flashcards({ questionId, setQuestionId }) {
             <button
               type="button"
               className="single-button black"
-              onClick={() => selectAnswer("black", true)}
+              onClick={() => selectAnswer("black", true, false)}
             >
               Agora aprendi
             </button>
             <button
               type="button"
               className="single-button red"
-              onClick={() => selectAnswer("red", false)}
+              onClick={() => selectAnswer("red", false, false)}
             >
               Não lembrei
             </button>
             <button
               type="button"
               className="single-button green"
-              onClick={() => selectAnswer("green", true)}
+              onClick={() => selectAnswer("green", true, false)}
             >
               Lembrei com esforço
             </button>
             <button
               type="button"
               className="single-button yellow"
-              onClick={() => selectAnswer("yellow", true)}
+              onClick={() => selectAnswer("yellow", true, true)}
             >
               Zap!
             </button>
