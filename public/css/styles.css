@@ -3,7 +3,7 @@ body {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .initial-page {
@@ -36,19 +36,9 @@ body {
 }
 
 .initial-page button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid #ffef61;
-  border-radius: 10px;
-  width: 392px;
-  height: 70px;
-
-  margin: 0 auto;
-
   background-color: #ffffff;
 }
+
 .start-button {
   display: flex;
   align-items: center;
@@ -140,8 +130,8 @@ body {
 }
 
 .flashcard .card-title {
-    position: absolute;
-    top: 10px;
+  position: absolute;
+  top: 10px;
 }
 
 .flashcard .answer-buttons {
@@ -190,26 +180,40 @@ body {
 }
 
 .final-page .message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 100%;
+  width: 100%;
 
-    margin-top: calc((100vh/2 - 84px));
+  margin-top: calc((100vh / 2 - 84px));
 }
 
 .final-page .message p {
-    font-size: 36px;
-    font-weight: 700;
-    margin-right: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-right: 8px;
 }
 
 .final-page p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    font-size: 22px;
-    margin-top: 26px;
+  font-size: 22px;
+  margin-top: 26px;
+}
+
+.final-page button {
+  background-color: #ffffff;
+  margin-top: 16px;
+
+  margin-right: 0 auto;
+}
+
+.final-page span {
+  font-weight: 700;
+  font-size: 20px;
+
+  margin-right: 5px;
 }
